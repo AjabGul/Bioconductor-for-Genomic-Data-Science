@@ -34,6 +34,8 @@ strand(cpg_islands)
 # Inspect first 10 CpG islands
 head(cpg_islands, 10)
 
+mcols(cpg_islands)
+
 # Check total number
 length(cpg_islands)
 
@@ -56,6 +58,8 @@ length(autosomal_cpg)
 # Q2: CpG islands on chromosome 4 ----
 chr4_cpg <- cpg_islands[seqnames(cpg_islands) == "chr4"]
 chr4_cpg
+mcols(chr4_cpg)
+
 # Total number of CpG islands on chr4
 length(chr4_cpg)
 
