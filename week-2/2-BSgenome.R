@@ -25,11 +25,14 @@ letterFrequency(chrI, "GC", as.prob = TRUE)
 
 
 
-# create a BSParams object specifying the genome and 
+# create a S4 class BSParams object specifying the genome and 
 # function to apply to each chromosome
 param <- new("BSParams",
              X = Scerevisiae,
              FUN = letterFrequency)
+
+
+param
 
 # apply letterFrequency to every chromosome to count GC content
 bsapply(param, "GC")
@@ -40,3 +43,4 @@ unlist(bsapply(param, "GC"))
 sum(unlist(bsapply(param, "GC"))) / sum(seqlengths(Scerevisiae))
 # compute GC proportion separately for each chromosome
 unlist(bsapply(param, "GC",  as.prob =TRUE))
+
