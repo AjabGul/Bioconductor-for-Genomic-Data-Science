@@ -1,0 +1,7 @@
+------------------------------------------------
+Run Length Encoder (Rle):
+
+An Rle (Run-Length Encoded) object stores repeated consecutive values as:
+
+the value
+the number of consecutive occurrences (run length)
